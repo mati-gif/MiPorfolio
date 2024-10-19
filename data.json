@@ -1,0 +1,61 @@
+  [
+    {
+        "id": 1,
+        "imagen": "./assets/Captura de pantalla 2024-10-15 184227.png",
+        "descripcion": "Es una aplicacion para un restaurante de Hamburguesas donde se puede pagar , reservar una mesa para comer en el local y hasta dejar una reseña de los productos",
+        "enlace": "https://nuevorepofrontentvoyager.onrender.com/",
+        "galeria": [
+                "./assets/Captura_de_pantalla_2024-10-16_005309-removebg-preview.png",
+                "./assets/redux-removebg-preview.png",
+                "./assets/react-removebg-preview.png",
+                "https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png"
+
+            ]
+        
+    },
+    {
+        "id": 2,
+        "imagen": "https://example.com/image2.jpg",
+        "descripcion": "Este es el producto 2, ideal para cualquier ocasión.",
+        "enlace": "https://example.com/producto2",
+        "imagenes": {
+            "thumb": "https://example.com/thumb2.jpg",
+            "galeria": [
+                "https://example.com/gallery2_1.jpg",
+                "https://example.com/gallery2_2.jpg",
+                "https://example.com/gallery2_3.jpg"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "imagen": "https://example.com/image3.jpg",
+        "descripcion": "Producto 3, diseñado con los mejores materiales.",
+        "enlace": "https://example.com/producto3",
+        "imagenes": {
+            "thumb": "https://example.com/thumb3.jpg",
+            "galeria": [
+                "https://example.com/gallery3_1.jpg",
+                "https://example.com/gallery3_2.jpg",
+                "https://example.com/gallery3_3.jpg"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "imagen": "https://example.com/image4.jpg",
+        "descripcion": "Este es el producto 4, con un diseño innovador y único.",
+        "enlace": "https://example.com/producto4",
+        "imagenes": {
+            "thumb": "https://example.com/thumb4.jpg",
+            "galeria": [
+                "https://example.com/gallery4_1.jpg",
+                "https://example.com/gallery4_2.jpg",
+                "https://example.com/gallery4_3.jpg"
+            ]
+        }
+    }
+]
+
+
+

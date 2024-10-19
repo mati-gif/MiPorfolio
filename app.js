@@ -1,72 +1,72 @@
 //funciòn que carga las animaciones de las habilidades
-function cargarAnimaciones(){
-    $(function(){
+function cargarAnimaciones() {
+    $(function () {
         $('.chart1').easyPieChart({
-            size:160,
-            barColor:"#ff5b00",
-            scaleLength:0,
-            lineWidth:15,
-            tackColor:"#525151",
-            lineCap:"circle",
-            animate:2000,
+            size: 160,
+            barColor: "#ff5b00",
+            scaleLength: 0,
+            lineWidth: 15,
+            tackColor: "#525151",
+            lineCap: "circle",
+            animate: 2000,
         });
         $('.chart2').easyPieChart({
-            size:160,
-            barColor:"#ff5b00",
-            scaleLength:0,
-            lineWidth:15,
-            tackColor:"#525151",
-            lineCap:"circle",
-            animate:2000,
+            size: 160,
+            barColor: "#ff5b00",
+            scaleLength: 0,
+            lineWidth: 15,
+            tackColor: "#525151",
+            lineCap: "circle",
+            animate: 2000,
         });
         $('.chart3').easyPieChart({
-            size:160,
-            barColor:"#ff5b00",
-            scaleLength:0,
-            lineWidth:15,
-            tackColor:"#525151",
-            lineCap:"circle",
-            animate:2000,
+            size: 160,
+            barColor: "#ff5b00",
+            scaleLength: 0,
+            lineWidth: 15,
+            tackColor: "#525151",
+            lineCap: "circle",
+            animate: 2000,
         });
         $('.chart4').easyPieChart({
-            size:160,
-            barColor:"#ff5b00",
-            scaleLength:0,
-            lineWidth:15,
-            tackColor:"#525151",
-            lineCap:"circle",
-            animate:2000,
+            size: 160,
+            barColor: "#ff5b00",
+            scaleLength: 0,
+            lineWidth: 15,
+            tackColor: "#525151",
+            lineCap: "circle",
+            animate: 2000,
         });
         $('.chart5').easyPieChart({
-            size:160,
-            barColor:"#ff5b00",
-            scaleLength:0,
-            lineWidth:15,
-            tackColor:"#525151",
-            lineCap:"circle",
-            animate:2000,
+            size: 160,
+            barColor: "#ff5b00",
+            scaleLength: 0,
+            lineWidth: 15,
+            tackColor: "#525151",
+            lineCap: "circle",
+            animate: 2000,
         });
         $('.chart6').easyPieChart({
-            size:160,
-            barColor:"#ff5b00",
-            scaleLength:0,
-            lineWidth:15,
-            tackColor:"#525151",
-            lineCap:"circle",
-            animate:2000,
+            size: 160,
+            barColor: "#ff5b00",
+            scaleLength: 0,
+            lineWidth: 15,
+            tackColor: "#525151",
+            lineCap: "circle",
+            animate: 2000,
         });
 
     })
 }
 //Función para filtrar las categorías de los trabajos
-function verCategoria(cat){
+function verCategoria(cat) {
     const items = document.getElementsByClassName("item");
-    for(let i=0; i < items.length;i++){
+    for (let i = 0; i < items.length; i++) {
         items[i].style.display = "none";
     }
 
     const itemCat = document.getElementsByClassName(cat);
-    for(let i = 0; i<itemCat.length;i++){
+    for (let i = 0; i < itemCat.length; i++) {
         itemCat[i].style.display = "block";
     }
 
@@ -103,9 +103,9 @@ function verCategoria(cat){
 // }
 
 //función que muestra el menu responsive{
-function responsiveMenu(){
+function responsiveMenu() {
     let x = document.getElementById("nav");
-    if(x.className===""){
+    if (x.className === "") {
         x.className = "responsive";
 
         //creamos el elemento que cierra el menu
@@ -114,12 +114,12 @@ function responsiveMenu(){
         document.getElementById("nav").appendChild(span);
 
         //quitamos el boton eliminar cuando se hace click sobre este
-        span.onclick = function(){
+        span.onclick = function () {
             x.className = "";
             span.remove();
         }
-    }else{
-        x.className="";
+    } else {
+        x.className = "";
     }
 }
 
@@ -127,8 +127,8 @@ function responsiveMenu(){
 //responsive
 //cuando se presione en cualquier de los links del menu debe desaparecer el menu
 const links = document.querySelectorAll("#nav a");
-for(i=0; i < links.length;i++){
-    links[i].onclick = function(){
+for (i = 0; i < links.length; i++) {
+    links[i].onclick = function () {
         var x = document.getElementById("nav");
         x.className = "";
 
@@ -150,10 +150,10 @@ for(i=0; i < links.length;i++){
 
 
 //Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
+function efectoHabilidades() {
     var skills = document.getElementById("skills");
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
+    if (distancia_skills >= 300) {
         let habilidades = document.getElementsByClassName("progreso");
         habilidades[0].classList.add("javascript");
         habilidades[1].classList.add("htmlcss");
@@ -170,9 +170,9 @@ function efectoHabilidades(){
 
 
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
+window.onscroll = function () {
     efectoHabilidades();
-} 
+}
 
 //--------- ↓↓↓↓↓↓ HACIENDO EL MODAL PARA LOS TRABAJOS ↓↓↓↓↓↓↓↓ -------------------//
 
@@ -180,12 +180,12 @@ window.onscroll = function(){
 
 //Arroy function.
 // const openModal = () =>{
-    
+
 // }
 
 //funcion anonima:
 // const openModal = function(parametro1,parametro2){
-    
+
 // }
 
 let infoP = document.querySelectorAll(".info-p");
@@ -196,35 +196,98 @@ const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 
 // Añadimos el event listener a cada párrafo
-infoP.forEach(function(infoP) {
+infoP.forEach(function (infoP) {
     infoP.addEventListener("click", openModal);
 });
 
 // Función para abrir el modal
-function openModal() {
+function openModal(event) {
+    let dataModalId = parseInt(event.target.getAttribute("data-modal-id"))
+    console.log(dataModalId);
+
+
+    fetch('data.json')
+        .then(response => {
+            // console.log(response.json());
+
+            return response.json()
+        })
+        .then(data => {
+            console.log(data);
+
+            let selectedProject = data.find(item => item.id === dataModalId)
+            console.log(selectedProject);
+
+            mostrarProductos(selectedProject)
+            mostrarProductos2(selectedProject)
+
+        }).catch(error => {
+            console.error('Hubo un problema con la solicitud:', error);
+        });
+
     modal.style.display = "block"; // Mostrar el modal
 }
 
 // Función para cerrar el modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none"; // Ocultar el modal
+    limpiarModal()
 }
 
 // Cerrar el modal si se hace clic fuera de él
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none"; // Ocultar el modal
+        limpiarModal()
+
     }
 }
 
-// Opcional: Funcionalidad para el botón enviar
-const submitButton = document.getElementById("submit");
-submitButton.addEventListener("click", function() {
-    const link = document.getElementById("link").value;
-    const info = document.getElementById("info").value;
-    console.log("Link ingresado:", link);
-    console.log("Información ingresada:", info);
-    // Aquí puedes agregar lógica para manejar los datos, como enviarlos a un servidor
-    modal.style.display = "none"; // Cerrar el modal después de enviar
-});
 
+
+function limpiarModal() {
+    modalContentDiv1.innerHTML = "";  // Limpiar la parte de la imagen
+}
+
+
+
+function mostrarProductos(selectedProject) {
+    console.log("Se llamo a la funcion correctamente", selectedProject);
+
+    modalContentDiv1 = document.querySelector(".modal-content-div1")
+    console.log(modalContentDiv1);
+
+    // data.forEach(item => {
+    //     `
+    //     <img src ="${item.imagen}" class="h-64 w-96 object-cover  sm: w-60 h-28"  alt = ${item.imagen}/>
+
+    //     `
+
+
+    // })
+
+
+    let imagen = `
+    <img src ="${selectedProject.imagen}" class="imagenModal"  alt = ${selectedProject.imagen}/>
+
+    `
+    modalContentDiv1.innerHTML += imagen/*  */
+}
+
+function mostrarProductos2(selectedProject) {
+    modalContentDiv2 = document.querySelector(".modal-content-div2")
+    let content =
+    `
+        <p class=" font-bold text-xl ">${selectedProject.descripcion}</p>
+        <span class=" font-bold text-xl ">Enlace:</span>
+        <a target="_blank" href="${selectedProject.enlace}">${selectedProject.enlace}</a>
+        <span class=" font-bold text-xl ">Tecnologias Usadas:</span>
+                
+    `
+
+   selectedProject.galeria.forEach(item => {
+        content += `<img src =${item} alt = ${item}/>`   
+    })
+
+    modalContentDiv2.innerHTML += content
+}
