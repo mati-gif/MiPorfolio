@@ -247,6 +247,7 @@ window.onclick = function (event) {
 
 function limpiarModal() {
     modalContentDiv1.innerHTML = "";  // Limpiar la parte de la imagen
+    modalContentDiv2.innerHTML = ""
 }
 
 
@@ -277,16 +278,19 @@ function mostrarProductos(selectedProject) {
 function mostrarProductos2(selectedProject) {
     modalContentDiv2 = document.querySelector(".modal-content-div2")
     let content =
-    `
-        <p class=" font-bold text-xl ">${selectedProject.descripcion}</p>
-        <span class=" font-bold text-xl ">Enlace:</span>
-        <a target="_blank" href="${selectedProject.enlace}">${selectedProject.enlace}</a>
-        <span class=" font-bold text-xl ">Tecnologias Usadas:</span>
+        `
+        <div class="div-overlay">
+            <p class="p-divContent2">${selectedProject.descripcion}</p>
+            <span class="span-divContent2">Enlace:</span>
+            <a class="a-divContent2" target="_blank" href="${selectedProject.enlace}">${selectedProject.enlace}</a>
+            <span class="span-divContent2">Tecnologias Usadas:</span>
+        </div>
+
                 
     `
 
-   selectedProject.galeria.forEach(item => {
-        content += `<img src =${item} alt = ${item}/>`   
+    selectedProject.galeria.forEach(item => {
+        content += `<img class=" img-divContent2"  src =${item} alt = ${item}/>`
     })
 
     modalContentDiv2.innerHTML += content
