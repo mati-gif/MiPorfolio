@@ -206,7 +206,7 @@ function openModal(event) {
     console.log(dataModalId);
 
 
-    fetch('data.json')
+    fetch('./data.json')
         .then(response => {
             // console.log(response.json());
 
