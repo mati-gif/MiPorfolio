@@ -16,9 +16,10 @@
     "conocimientos": "Knowledge |  Conocimientos",
     "herramientas": " Dev  Tools | Herramientas ",
     "masSobreMi": "More about me",
-    "masDescripcion": "My name is Rajesh Daya Oda. I am a Robotics Engineer and Frontend Developer focused on applications and web development.",
-    "masDescripcion2": "I have worked on various web projects with different technologies. I always keep myself updated as I like to learn new things.",
-    "ubicacion": "Location",
+    "masDescripcion": "My name is Matias, Full Stack Java + React JavaScript Developer. I am dedicated to creating robust and scalable applications, combining Java with Spring (Spring Data JPA, Spring Web, Spring Security) and React JavaScript. I also handle Redux and Tailwind CSS, along with relational databases like PostgreSQL. I have worked under agile methodologies such as Scrum, which has allowed me not only to maintain excellent communication with teams and clients, but also to implement the best practices on the market. I am a curious, collaborative person and always constantly learning, which helps me quickly adapt to new technologies and challenges. In addition, I am currently studying Accounting, which has strengthened my analytical and organizational skills, providing a more comprehensive vision to project management and teamwork. My focus is on quality and results, ensuring efficient and well-structured solutions.",
+    "masDescripcion2": "",
+    "ubicacion": "Location:",
     "enlace": "Link",
-    "tecnologiasUsadas": "Technologies Used"
+    "tecnologiasUsadas": "Technologies Used",
+    "infoDebajoTarjeta": "(To see more information click on the cards)"
 }

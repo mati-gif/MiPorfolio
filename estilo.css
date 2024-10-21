@@ -1,47 +1,55 @@
 /* importamos la fuente */
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;800&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'M PLUS Rounded 1c';
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: #f6fafc;
 }
 
 /* SECCION I N I C I O */
-.inicio{
-    background:linear-gradient(to right, #000c67, #007be5);
+.inicio {
+    background: linear-gradient(to right, #000c67, #007be5);
     clip-path: polygon(0 0, 100% 0, 100% 46%, 47% 84%, 0 45%);
     height: 90vh;
-    padding:  0 20px;
+    padding: 0 20px;
 }
-.inicio .contenido{
+
+.inicio .contenido {
     max-width: 1100px;
     margin: auto;
     color: #fff;
 }
-.inicio header{
+
+.inicio header {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
     align-items: center;
 }
-.inicio .logo{
+
+.inicio .logo {
     display: flex;
     align-items: center;
     color: #00deef;
     font-size: 25px;
 }
-.inicio .logo i{
+
+.inicio .logo i {
     display: inline-block;
     margin-right: 20px;
 }
-#inicio header nav a{
+
+#inicio header nav a {
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -49,75 +57,101 @@ body{
     text-transform: uppercase;
     border: 2px solid transparent;
 }
-#inicio header nav a:hover{
+
+#inicio header nav a:hover {
     border-bottom: 2px solid #ff5b00;
 }
-.inicio .redes a{
+
+.inicio .redes a {
     text-decoration: none;
     color: #000;
     display: inline-block;
     margin: 0 10px;
     font-size: 20px;
 }
-#btn-en, #btn-es{
+
+#btn-en,
+#btn-es {
     font-size: 20px;
     background-color: transparent;
-    border:  none;
+    border: none;
     margin: 0 10px;
     color: #fff;
     cursor: pointer;
 
-
 }
 
-#btn-en:hover, #btn-es:hover{
-    color: #ff5b00 ;
+/* Estilo predeterminado para los botones de idioma */
+.button-lang {
+    color: greenyellow;
+    /* Color por defecto */
 }
 
-.inicio .redes a:hover{
+/* Clase que aplica el color cuando el botón está seleccionado */
+.active-lang {
+    color: #ff5b00 !important;
+    /* Cambia el color a rojo para el botón seleccionado */
+}
+
+
+#btn-en:hover,
+#btn-es:hover {
     color: #ff5b00;
 }
-.inicio .fila{
+
+.inicio .redes a:hover {
+    color: #ff5b00;
+}
+
+.inicio .fila {
     display: flex;
     margin-top: 50px;
     padding-bottom: 100px;
 }
-.inicio .fila .col{
+
+.inicio .fila .col {
     width: 50%;
 }
-.inicio .fila .col h2{
+
+.inicio .fila .col h2 {
     margin-bottom: 15px;
     font-size: 40px;
 }
-.inicio .fila .col p{
+
+.inicio .fila .col p {
     margin-bottom: 20px;
 }
 
-.inicio .fila .col .contenedor-img{
+.inicio .fila .col .contenedor-img {
     max-width: 400px;
     margin: auto;
 }
-.inicio .fila .col .contenedor-img img{
+
+.inicio .fila .col .contenedor-img img {
     width: 100%;
 }
-.col-parrafo{
+
+.col-parrafo {
     font-size: 20px;
 }
-.inicio .fila .col button{
+
+.inicio .fila .col button {
     background: none;
     width: fit-content;
     padding: 12px 40px;
     border: 2px solid #ff5b00;
     color: #fff;
-    background:linear-gradient(to right, #ff5b00, #ff9900);
+    background: linear-gradient(to right, #ff5b00, #ff9900);
     transition: .5s;
     cursor: pointer;
     font-size: 18px;
 }
-.inicio .fila .col button:hover{
+
+.inicio .fila .col button:hover {
     transform: scale(1.1);
 }
-#icono-nav{
+
+#icono-nav {
     height: 30px;
     width: 30px;
     text-align: center;
@@ -127,77 +161,85 @@ body{
     cursor: pointer;
     display: none;
 }
-#icono-nav:hover{
+
+#icono-nav:hover {
     background-color: #3e3e3e;
 }
-.sombra{
-    filter:drop-shadow(0em 30px 20px #9bd2f4);
+
+.sombra {
+    filter: drop-shadow(0em 30px 20px #9bd2f4);
 }
 
-/* seccion HABILIDADES */
-.habilidades{
-    background:linear-gradient(to right, #000c76, #007be5);
-    color: #fff;
-    padding: 60px 0;
-    position: relative;
-    top: -100px;
-}
-.habilidades h2{
-    text-align: center;
-}
-.habilidades .contenedor-habi{
-    max-width: 1100px;
-    margin: auto;
-}
-.habilidades .fila{
-    display: flex;
-    justify-content: space-around;
-}
-.score{
-    padding: 10px;
-    margin: auto 0;
-}
-.score .box{
-    width: 100%;
-}
-.score .box h2{
-    display: block;
-    text-align: center;
-}
-.score .box .chart{
-    position: relative;
-    width: 160px;
-    height: 160px;
-    margin: auto;
-    line-height: 160px;
-    font-size: 40px;
-    text-align: center;
-}
 
 /* Esta clase se genera dinámicamente por la librera para graficos */
-.score .box canvas{
-    position:absolute;
+.score .box canvas {
+    position: absolute;
     top: 0;
     left: 0;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .inicio header {
+        flex-direction: column; /* Cambia la dirección del layout a columna */
+        align-items: center;
+    }
+
+    .redes {
+        order: -1; /* Coloca los botones arriba del nombre */
+        margin-bottom: 15px; /* Añade un margen inferior para separarlo del nombre */
+    }
+
+    .logo {
+        margin-top: 10px; /* Un pequeño margen superior */
+        text-align: center; /* Centra el contenido de la logo */
+    }
+
+    #btn-en,
+    #btn-es {
+        font-size: 18px; /* Ajusta el tamaño de los botones */
+        margin: 5px; /* Ajusta el margen entre botones */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #btn-en,
+    #btn-es {
+        font-size: 16px; /* Tamaño más pequeño en pantallas muy pequeñas */
+        margin: 3px; /* Menos margen en pantallas pequeñas */
+    }
+
+    .logo {
+        font-size: 20px; /* Ajusta el tamaño del texto de la logo si es necesario */
+    }
+}
+
+
+
+/* ↑↑↑↑↑ ACA TERMINA LA SECCION DEL NAV Y DEL INICIO ↑↑↑↑↑↑↑*/
+
 /* SECCION T R A B A J O S */
-.trabajos{
+.trabajos {
     max-width: 1300px;
     margin: auto;
     padding: 10px 30px;
 
 }
-.trabajos h2{
+
+.trabajos h2 {
     text-align: center;
-    border: 2px solid #48e;
+    /* border: 2px solid #48e; */
     font-size: 35px;
-    margin: 20px;
+    margin: 15px;
 }
-.trabajos nav{
+
+.trabajos nav {
     text-align: center;
     margin: 30px 0;
 }
-.trabajos nav a{
+
+.trabajos nav a {
     text-decoration: none;
     display: inline-block;
     margin: 0 20px;
@@ -206,130 +248,262 @@ body{
     padding: 3px 10px;
     border: 3px solid transparent;
 }
-.trabajos nav a:hover{
+
+.trabajos nav a:hover {
     border: 3px solid #ff5b00;
 }
+
 /* Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
-.borde{
-    border: 3px solid #ff5b00 !important;  
+.borde {
+    border: 3px solid #ff5b00 !important;
 }
-.trabajos .galeria .item img{
+
+.trabajos .galeria .item img {
     width: 100%;
     height: 100%;
     display: block;
 }
-.trabajos .galeria{
+
+.trabajos .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    grid-gap:30px;
+    grid-gap: 30px;
 }
-.trabajos .galeria .item{
+
+.trabajos .galeria .item {
     position: relative;
     overflow: hidden;
-    border: 1px solid #8d8d8d ;
+    border: 1px solid #8d8d8d;
     border-radius: 10px;
 }
-.trabajos .galeria .item .info{
+
+.trabajos .galeria .item .info {
     position: absolute;
     top: -100%;
     left: 0;
     bottom: 0;
     text-align: center;
-    background-color:#f6fafc ;
+    background-color: #f6fafc;
     width: 100%;
     padding: 20px;
     opacity: 0;
     transition: .3s;
 }
-.trabajos .galeria .item .info h3{
+
+.trabajos .galeria .item .info h3 {
     color: #000;
     margin-bottom: 20px;
 }
-.info h3{
-    border: 1px solid #000;
+
+.info h3 {
+    /* border: 1px solid #000; */
     padding: 10px;
     font-size: 24px;
 }
-.trabajos .galeria .item .info span{
+
+.trabajos .galeria .item .info span {
     color: #8d8d8d;
     display: inline-block;
     border: 2px solid #8d8d8d;
     margin: 0 3px;
-    padding:  0 5px;
+    padding: 0 5px;
 }
-.trabajos .galeria .item .info a{
+
+.trabajos .galeria .item .info a {
     display: block;
     margin: 20px;
     text-decoration: none;
     color: #007be5;
     font-weight: bold;
+    /* border: 1px solid #000; */
 }
+
 .info a {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 10px;
     font-size: 20px;
 
 }
 
-.info-p{
+.info-p {
     padding: 6px;
     font-size: 20px;
     width: 20%;
     margin: auto;
-    background:linear-gradient(to right, #ff5b00, #ff9900);
+    background: linear-gradient(to right, #ff5b00, #ff9900);
     color: #fff;
     border-radius: 10px;
     border: 1px solid #000;
     cursor: pointer;
-    
+
 }
 
-.info-p:hover{
-/* animation: 1s info-p forwards; */
-border: none;
-background-color: #FF9200;
+.info-p:hover {
+    /* animation: 1s info-p forwards; */
+    border: none;
+    background-color: #FF9200;
 }
 
-.trabajos .galeria .item:hover .info{
+.trabajos .galeria .item:hover .info {
     opacity: 1;
     top: 0;
 }
 
-/*Estilos para abrir el modal*/
+.infoDebajoTarjeta{
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    display: none;
+    /* border: 1px solid #000; */
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .info h3 {
+        font-size: 20px;
+        /* Reduce el tamaño del título */
+        padding: 8px;
+        /* Ajusta el padding */
+    }
+
+    .trabajos .galeria .item .info a {
+        font-size: 18px;
+        /* Reduce el tamaño del enlace */
+        margin: 15px;
+        /* Ajusta el margen */
+        padding: 8px;
+        /* Reduce el padding */
+    }
+
+    .info-p {
+        font-size: 18px;
+        /* Reduce el tamaño del texto del botón */
+        width: 40%;
+        /* Aumenta el ancho para móviles */
+        padding: 8px;
+        /* Ajusta el padding */
+    }
+
+    .trabajos .galeria .item:hover .info {
+        opacity: 1;
+        top: 0;
+    }
+
+    .infoDebajoTarjeta{
+        text-align: center;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline;
+        /* border: 1px solid #000; */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info h3 {
+        font-size: 16px;
+        /* Reduce más el tamaño del título en pantallas pequeñas */
+        padding: 6px;
+        /* Ajusta el padding */
+    }
+
+    .trabajos .galeria .item .info a {
+        font-size: 14px;
+        /* Reduce el tamaño del enlace */
+        margin: 5px;
+        /* Ajusta el margen */
+        padding: 5px;
+        /* Reduce el padding */
+    }
+
+    .info-p {
+        font-size: 14px;
+        /* Reduce el tamaño del texto del botón */
+        width: auto;
+        /* Cambia el width para que se ajuste automáticamente al contenido */
+        padding: 4px;
+        /* Reduce el padding */
+        margin: 5px auto;
+        /* Asegura que el botón esté centrado */
+        display: block;
+        /* Asegura que el botón ocupe toda la línea disponible */
+    }
+
+    .trabajos .galeria .item .info {
+        padding: 10px;
+        /* Reduce el padding dentro de la tarjeta */
+    }
+
+    .trabajos .galeria .item:hover .info {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .trabajos .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* Reduce el min-width de 480px a 280px */
+        grid-gap: 15px;
+        /* Reduce el espacio entre los elementos si es necesario */
+    }
+    .trabajos .galeria .item:hover .info {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+/* ↑↑↑↑↑↑↑  ACA TERMINA LA SECCION T R A B A J O S ↑↑↑↑↑↑↑*/
+
+/*↓↓↓↓↓↓↓↓ Estilos para abrir el modal ↓↓↓↓↓↓↓↓*/
 
 .modal {
-    display: none; /* Ocultar el modal por defecto */
-    position: fixed; /* Quedarse en el mismo lugar */
-    z-index: 1; /* Quedarse encima del contenido */
+    display: none;
+    /* Ocultar el modal por defecto */
+    position: fixed;
+    /* Quedarse en el mismo lugar */
+    z-index: 1;
+    /* Quedarse encima del contenido */
     left: 0;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Alto completo */
-    overflow: auto; /* Permitir desplazamiento si es necesario */
-    background-color: rgb(0,0,0); /* Color de fondo */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
-    border: 10px solid #040;
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Alto completo */
+    overflow: auto;
+    /* Permitir desplazamiento si es necesario */
+    background-color: rgb(0, 0, 0);
+    /* Color de fondo */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fondo oscuro con opacidad */
+    /* border: 10px solid #040; */
 }
 
 /* Contenido del modal */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% desde la parte superior y centrado */
+    margin: 15% auto;
+    /* 15% desde la parte superior y centrado */
     padding: 20px;
     border: 1px solid #888;
-    width: 55%; /* Ancho del modal */
+    width: 55%;
+    /* Ancho del modal */
     height: 65%;
-    border: 5px solid #6f6;
+    /* border: 5px solid #6f6; */
     border-radius: 10px;
     /* background:linear-gradient(to right, #007be5, #007be5); */
-    background-color: #F6FAFC ;
+    background-color: #F6FAFC;
     display: flex;
     gap: 8px;
 }
 
 
-.modal-content-div1{
-    border: 3px solid #000;
+.modal-content-div1 {
+    /* border: 3px solid #000; */
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -339,71 +513,77 @@ background-color: #FF9200;
 
 
 
-.modal-content2{
-    border: 3px solid #48e;
+.modal-content2 {
+    /* border: 3px solid #48e; */
     width: 100%;
     height: 110%;
     display: flex;
 }
 
-.imagenModal{
+.imagenModal {
     width: 100%;
     height: 100%;
-    object-fit:contain;
+    object-fit: contain;
     object-position: top;
-    border: 1px solid #fd07e0;
+    /* border: 1px solid #fd07e0; */
     margin-top: 30px;
+
 
 }
 
 /*Contendor del lado derecho del modal*/
-.modal-content-div2{
-    border: 3px dashed #a4f;
+.modal-content-div2 {
+    /* border: 3px dashed #a4f; */
     width: 50%;
 
-    
+
 }
 
-.div-overlay{
-    border: 1px solid #58e705;
+.div-overlay {
+    /* border: 1px solid #58e705; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 70%;
 }
-.p-divContent2{
+
+.p-divContent2 {
     color: #000;
     font-size: 20px;
     padding: 5px;
     font-weight: bold;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
-.img-divContent2{
+
+.img-divContent2 {
     width: 10%;
     margin: 3px;
     margin-top: 8px;
 }
-.span-divContent2{
+
+.span-divContent2 {
     color: #ff5b00;
     font-size: 24px;
     font-weight: bold;
     margin-top: 15px;
 }
-.a-divContent2{
+
+.a-divContent2 {
     color: #000c76;
     font-size: 18px;
     padding: 6px;
     font-weight: bold;
 
 }
+
 /* Botón de cerrar */
 .close {
     color: #aaa;
     float: right;
     font-size: 35px;
     font-weight: bold;
-    border: 1px solid #000;
-    
+    /* border: 1px solid #000; */
+
 }
 
 .close:hover,
@@ -413,97 +593,125 @@ background-color: #FF9200;
     cursor: pointer;
 }
 
-/* SECCIÓN C O N T A C T O */
-/* .contacto{
-    background:
-        linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.8)),
-        url("data:image/png;base64,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");
-        background-size: cover;
-        color: #fff;
-        margin-top: 100px;
-        padding: 80px 20px;
-}
-.contacto .contenedor-contacto{
-    max-width: 1100px;
-    margin: auto;
-}
-.contacto h2{
-    text-align: center;
-    padding-bottom: 30px;
-}
-.contacto .contenedor-contacto .fila{
-    display: flex;
-}
-.contacto .contenedor-contacto .fila .col{
-    width: 50%;
-}
-.contacto .contenedor-contacto .info{
-    margin-bottom: 30px;
-    border-left: 3px solid #8d8d8d;
-    padding-left: 8px;
-}
-.contacto .contenedor-contacto .info p{
-    color: #8d8d8d;
-}
-.contacto input, .contacto textarea{
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    padding: 10px;
-    border: 1px solid #8d8d8d ;
-    margin-bottom: 20px;
-    outline: none;
-    color: #ff5b00;
-}
-.contacto .btn{
-    background-color: none;
-    padding: 5px 40px;
-    border: 2px solid;
-    color: #fff;
-    cursor: pointer;
-    background: linear-gradient(to right, #ff5b00, #ff9900);
-}
-
-footer{
-    background-color: #000;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 14px;
-    text-align: center;
-} */
+/*RESPONSIVE DEL MODAL*/
 
 
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+        /* Ajusta el ancho del modal en tabletas */
+        height: auto;
+        flex-direction: column;
+        /* Coloca los elementos en columna */
+    }
 
+    .modal-content-div1,
+    .modal-content-div2 {
+        width: 100%;
+        /* Cada columna ocupa todo el ancho */
+        margin-bottom: 20px;
+        /* Agrega un espacio entre las secciones */
+    }
+
+    .modal-content-div2 {
+        height: auto;
+    }
+
+    .p-divContent2 {
+        font-size: 18px;
+        /* Ajusta el tamaño de fuente */
+    }
+
+    .span-divContent2 {
+        font-size: 20px;
+        /* Ajusta el tamaño de fuente */
+
+    }
+
+    .a-divContent2 {
+        font-size: 16px;
+        /* Ajusta el tamaño de fuente */
+        padding: 5px;
+        /* Ajusta el padding */
+        word-wrap: break-word;
+        /* Permite que el texto del enlace se ajuste y no se desborde */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 55%;
+        /* Ajusta el ancho del modal en móviles */
+        margin: 10% auto;
+        /* Más centrado en móviles */
+        height: auto;
+        flex-direction: column;
+    }
+
+    .modal-content-div1,
+    .modal-content-div2 {
+        width: 100%;
+    }
+
+    .imagenModal {
+        margin-top: 10px;
+        /* Reduce el margen superior */
+    }
+
+    .p-divContent2,
+    .span-divContent2,
+    .a-divContent2 {
+        font-size: 14px;
+        /* Ajusta el tamaño de las fuentes para pantallas más pequeñas */
+        padding: 4px;
+        /* Ajusta el padding para pantallas pequeñas */
+        word-wrap: break-word;
+        /* Asegura que el texto se ajuste correctamente */
+    }
+
+    .close {
+        font-size: 30px;
+        /* Ajusta el tamaño del botón cerrar */
+    }
+}
+
+/*ACA TERMINA ↑↑↑↑↑↑↑ TODO SOBRE EL MODAL ↑↑↑↑↑↑↑↑↑*/
 
 
 /* SECCION ↓↓↓↓ S K I L L S ↓↓↓↓ (Habilidades) */
-.skills{
-    background:linear-gradient(to right, #000c76, #007be5);
+.skills {
+    background: linear-gradient(to right, #000c76, #007be5);
     color: #fff;
     padding: 50px 20px;
     margin-top: 100px;
 }
-.skills .contenido-seccion{
+
+.skills .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.skills h2{
+
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 
 }
-.skills .fila{
+
+.skills .fila {
     display: flex;
 }
-.skills .fila .col{
+
+.skills .fila .col {
     width: 50%;
     padding: 0px 20px;
     /* border: 5px dotted #6d4; */
 
 }
-.skills .fila .col h3{
+
+.skills .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
@@ -511,12 +719,14 @@ footer{
     width: 53vw;
     text-align: center;
 }
-.skills .skill > span{
+
+.skills .skill>span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
-.skills .skill .barra-skill{
+
+.skills .skill .barra-skill {
     height: 8px;
     width: 80%;
     background-color: #131517;
@@ -524,14 +734,16 @@ footer{
     margin-bottom: 30px;
 
 }
-#columna-derecha{
+
+#columna-derecha {
     /* border: 10px solid #48e; */
     display: flex;
     justify-content: end;
     flex-direction: column;
 
 }
-.skills .skill .progreso{
+
+.skills .skill .progreso {
     background-color: #1CB698;
     position: absolute;
     top: 0;
@@ -539,7 +751,8 @@ footer{
     height: 8px;
 
 }
-.skills .skill .barra-skill span{
+
+.skills .skill .barra-skill span {
     position: absolute;
     height: 40px;
     width: 40px;
@@ -552,87 +765,148 @@ footer{
     font-size: 14px;
 
 }
+
 /* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
+.skills .skill .javascript {
     width: 0%;
     animation: 2s javascript forwards;
 }
+
 @keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 75%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
 }
 
-.skills .skill .htmlcss{
+.skills .skill .htmlcss {
     width: 0%;
     animation: 2s htmlcss forwards;
 }
+
 @keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 90%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
 }
+
 /*En realidad es React Js no photoshop,todo lo que sea photoshop es para React Js*/
-.skills .skill .photoshop{
+.skills .skill .photoshop {
     width: 0%;
     animation: 2s photoshop forwards;
 }
+
 @keyframes photoshop {
-    0%{width: 0%;}
-    100%{width: 75%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
 }
+
 /*En realidad es Tailwind CSS no wordpress,todo lo que sea wordpress es para Tailwind CSS*/
-.skills .skill .wordpress{
+.skills .skill .wordpress {
     width: 0%;
     animation: 2s wordpress forwards;
 }
+
 @keyframes wordpress {
-    0%{width: 0%;}
-    100%{width: 90%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
 }
+
 /*En realidad es Redux no drupal,todo lo que sea drupal es para Redux*/
-.skills .skill .drupal{
+.skills .skill .drupal {
     width: 0%;
     animation: 2s drupal forwards;
 }
+
 @keyframes drupal {
-    0%{width: 0%;}
-    100%{width: 70%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
 }
+
 /*En realidad es Java no comunicacion,todo lo que sea comunicacion es para Java*/
-.skills .skill .comunicacion{
+.skills .skill .comunicacion {
     width: 0%;
     animation: 2s comunicacion forwards;
 }
+
 @keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 90%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
 }
+
 /*En realidad es Spring no trabajo,todo lo que sea trabajo es para Spring*/
-.skills .skill .trabajo{
+.skills .skill .trabajo {
     width: 0%;
     animation: 2s trabajo forwards;
 }
+
 @keyframes trabajo {
-    0%{width: 0%;}
-    100%{width: 90%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
 }
+
 /*En realidad es jwt no creatividad,todo lo que sea creatividad es para jwt*/
-.skills .skill .creatividad{
+.skills .skill .creatividad {
     width: 0%;
     animation: 2s creatividad forwards;
 }
+
 @keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 90%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
 }
 
 /*En realidad es PostgreSQL no dedicacion,todo lo que sea dedicacion es para PostgreSQL*/
-.skills .skill .dedicacion{
+.skills .skill .dedicacion {
     width: 0%;
     animation: 2s dedicacion forwards;
 }
+
 @keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 75%;}
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
 }
 
 /*No la  ↓↓↓ estoy usando */
@@ -652,15 +926,15 @@ footer{
 
 section.skillss {
     background-color: var(--dark1);
-    background:linear-gradient(to right, #000c76, #007be5);
+    background: linear-gradient(to right, #000c76, #007be5);
 
 }
 
 .skilll {
     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     justify-content: center;
-    gap:170px;
+    gap: 170px;
     width: 90%;
     margin: 0 auto;
     padding-bottom: 110px;
@@ -673,19 +947,21 @@ section.skillss {
 }
 
 .skilll img {
-    width:90px;
+    width: 90px;
 }
+
 .knowledge {
-   display: grid;
-   grid-template-columns:repeat(auto-fit,minmax(110px,auto));
-   justify-content: center;
-   gap:25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, auto));
+    justify-content: center;
+    gap: 25px;
 }
+
 .tools {
     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(70px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(70px, auto));
     justify-content: center;
-    gap:50px;
+    gap: 50px;
 
 }
 
@@ -695,51 +971,54 @@ section.skillss {
     /* background-color: #050505; */
     text-align: center;
     border-radius: 5px;
-    padding:5px 0;
+    padding: 5px 0;
     font-size: 1.1rem;
     color: #fff;
-    width:100px;
+    width: 100px;
     opacity: 0;
-    transform: translate(0px,-100px);
+    transform: translate(0px, -100px);
     transition: transform 0.4s ease, opacity 0.4s ease;
 
 
 }
+
 .knowledge>div:hover h3,
 .tools>div:hover h3 {
     opacity: 1;
-    transform: translate(0px,-150px);
+    transform: translate(0px, -150px);
 }
 
-#herramientas-h2, #Conocimientos-h2{
+#herramientas-h2,
+#Conocimientos-h2 {
     color: #fff;
 }
 
-.java-img{
-/* border: 1px solid #000; */
-margin-top: -10px;
+.java-img {
+    /* border: 1px solid #000; */
+    margin-top: -10px;
 }
 
-.npm-logo{
+.npm-logo {
     margin-top: 30px;
 }
 
 
 
-/*about*/
+/*↓↓↓↓↓↓ SECCION SOBRE MI (ABOUT) ↓↓↓↓↓↓↓*/
 
 .about {
     background-color: #F6FAFC;
 }
+
 .about-flex {
     display: flex;
     width: 90%;
     margin: 0 auto;
-    padding: 50px 0 100px; 
+    padding: 50px 0 100px;
 }
 
 .about p {
-    font-size:1.5rem;
+    font-size: 1.5rem;
     width: 90%;
     margin: 0 auto;
     line-height: 2.5rem;
@@ -759,27 +1038,110 @@ margin-top: -10px;
     transform: scale(1.2);
 }
 
-.h2-about{
+.h2-about {
     text-align: center;
     padding: 10px;
     font-size: 40px;
 }
 
+/* Estilos responsivos para la sección .about */
+@media screen and (max-width: 768px) {
+    .about-flex {
+        flex-direction: column;
+        /* Cambia a columna en móviles */
+        align-items: center;
+        /* Centra el contenido horizontalmente */
+        padding: 30px 10px;
+        /* Reduce el padding en móviles */
+    }
 
-footer{
-    background:linear-gradient(to right, #000c76, #007be5);
+    .about p {
+        font-size: 1.2rem;
+        /* Reduce el tamaño de la fuente en móviles */
+        line-height: 1.8rem;
+        /* Ajusta la altura de línea */
+        width: 95%;
+        /* Aumenta el ancho para que ocupe más espacio en móviles */
+    }
+
+    .social {
+        border-left: none;
+        /* Elimina el borde en móviles */
+        padding: 0;
+        /* Elimina el padding en móviles */
+        display: flex;
+        /* Usa flex para alinear los elementos */
+        flex-direction: column;
+        /* Coloca los elementos en columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+        margin-bottom: 20px;
+        /* Agrega un margen inferior */
+    }
+
+    .social img {
+        width: 50px;
+        /* Reduce el tamaño de los iconos en móviles */
+        margin: 5px;
+        /* Reduce el margen entre los iconos */
+    }
+
+    .h2-about {
+        font-size: 30px;
+        /* Reduce el tamaño de la fuente del título */
+    }
+
+    /* Estilo adicional para el texto debajo de las redes */
+    .social span {
+        font-size: 1rem;
+        /* Tamaño del texto debajo de los iconos */
+        color: #000;
+        /* Color del texto */
+        text-align: center;
+        /* Centra el texto */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about p {
+        font-size: 1rem;
+        /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    .h2-about {
+        font-size: 24px;
+        /* Reduce más el tamaño de la fuente del título */
+    }
+
+    .social img {
+        width: 40px;
+        /* Reduce el tamaño de los iconos para pantallas pequeñas */
+    }
+
+    .social span {
+        font-size: 0.9rem;
+        /* Tamaño del texto debajo de los iconos */
+    }
+}
+
+/* ↑↑↑↑↑↑↑↑ ACA TERMINA TODO SOBRE EL ABOUT (SOBRE MI) ↑↑↑↑↑↑↑↑*/
+
+/*SECCION FOOTER (DONDE ESTA MI INFORMACION)*/
+footer {
+    background: linear-gradient(to right, #000c76, #007be5);
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
     width: 100%;
-    border: 5px dashed #845;
+    /* border: 5px dashed #845; */
 
 
 }
-footer .redes{
+
+footer .redes {
     margin-bottom: 20px;
-    border: 5px dashed #3f3;
+    /* border: 5px dashed #3f3; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -787,41 +1149,43 @@ footer .redes{
     gap: 10px;
     height: 100%;
 }
+
 footer .redes p {
     color: #FF9200;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     /* border-radius: 100%; */
     width: 100%;
     height: 100%;
     /* line-height: 42px; */
     /* margin: 10px; */
     transition: .3s;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 10px;
     font-size: 30px;
     font-weight: bolder;
 
 }
 
-.redes-a{
+.redes-a {
     color: #FF9200;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     /* border-radius: 100%; */
     width: 100%;
     height: 100%;
     /* line-height: 42px; */
     /* margin: 10px; */
     transition: .3s;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 10px;
     font-size: 30px;
     font-weight: bolder;
 }
 
-.redes-span{
+.redes-span {
     color: #fff;
 }
-footer .arriba{
+
+footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
@@ -835,28 +1199,114 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
-.footer-h2{
-    border: 1px solid #000;
+
+.footer-h2 {
+    /* border: 1px solid #000; */
     width: 100%;
     height: 100%;
     font-size: 40px;
 }
 
+@media screen and (max-width: 480px) {
+    .redes-span {
+        font-size: 14px;
+        /* Ajusta el tamaño del texto para móviles */
+        word-wrap: break-word;
+        /* Permite que el texto largo se ajuste al ancho de la pantalla */
+        word-break: break-all;
+        /* Fuerza el corte de palabras largas si es necesario */
+    }
+}
+
+/* Estilos responsivos para el footer */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 30px 10px;
+        /* Reduce el padding para móviles */
+        flex-direction: column;
+        /* Cambia la dirección a columna */
+        text-align: center;
+        /* Asegura que el texto esté centrado */
+    }
+
+    footer .redes {
+        width: 100%;
+        /* Asegura que el contenedor de redes ocupe el ancho completo */
+        gap: 5px;
+        /* Reduce el espacio entre los elementos */
+    }
+
+    footer .redes p,
+    .redes-a {
+        font-size: 20px;
+        /* Reduce el tamaño de fuente para móviles */
+        padding: 8px;
+        /* Ajusta el padding para que no ocupe tanto espacio */
+        width: auto;
+        /* Permite que el ancho se ajuste automáticamente */
+    }
+
+    footer .arriba {
+        width: 40px;
+        /* Reduce el tamaño del círculo */
+        height: 40px;
+        /* Reduce el tamaño del círculo */
+        line-height: 40px;
+        /* Ajusta el alineado vertical del texto */
+        font-size: 16px;
+        /* Reduce el tamaño de fuente del texto */
+    }
+
+    .footer-h2 {
+        font-size: 30px;
+        /* Reduce el tamaño de la fuente del encabezado */
+        padding: 10px;
+        /* Agrega un poco de padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer .redes {
+        gap: 3px;
+        /* Reduce aún más el espacio entre los elementos */
+    }
+
+    footer .redes p,
+    .redes-a {
+        font-size: 18px;
+        /* Reduce el tamaño de fuente para pantallas muy pequeñas */
+        padding: 5px;
+        /* Ajusta el padding para pantallas muy pequeñas */
+    }
+
+    .footer-h2 {
+        font-size: 24px;
+        /* Reduce más el tamaño de la fuente del encabezado */
+    }
+}
+
+
+/* ↑↑↑↑↑↑↑ ACA TERMINA EL FOOTER ↑↑↑↑↑↑↑*/
+
+
 /* SECCION RESPONSIVE */
-@media screen and (max-width:1180px){
-    .inicio{
+@media screen and (max-width:1180px) {
+    .inicio {
         clip-path: none;
     }
 }
-@media screen and (max-width:800px){
-    .redes{
+
+@media screen and (max-width:800px) {
+/*     .redes {
+        display: none;
+    } */
+
+    #nav {
         display: none;
     }
-    #nav{
-        display: none;
-    }
-    #nav.responsive{
-        background-color: rgba(0,0,0,.9);
+
+    #nav.responsive {
+        background-color: rgba(0, 0, 0, .9);
         top: 0;
         left: 0;
         height: 100vh;
@@ -869,62 +1319,74 @@ footer .arriba{
         justify-content: center;
         z-index: 99;
     }
-    #nav.responsive a{
+
+    #nav.responsive a {
         font-size: 30px;
     }
-    #icono-nav{
+
+    #icono-nav {
         display: block;
     }
 
-    .inicio{
+    .inicio {
         height: auto;
     }
-    .inicio .fila{
+
+    .inicio .fila {
         display: block;
     }
-    .inicio .fila .col{
+
+    .inicio .fila .col {
         width: 100%;
         text-align: center;
     }
-    .inicio .fila .col h2{
+
+    .inicio .fila .col h2 {
         margin-top: 20px;
     }
-    .inicio .fila .col .contenedor-img{
+
+    .inicio .fila .col .contenedor-img {
         width: 50%;
         margin-top: 30px;
     }
 
-    .servicios{
+    .servicios {
         position: static;
         padding: 20px;
     }
-    .servicios .fila{
+
+    .servicios .fila {
         display: block;
         margin-bottom: 0;
     }
-    .servicios .fila .col{
+
+    .servicios .fila .col {
         width: 70%;
         margin: auto;
     }
-    .servicios .fila .col .card{
+
+    .servicios .fila .col .card {
         margin-bottom: 20px;
     }
-    .habilidades{
+
+    .habilidades {
         position: static;
     }
 
-    .trabajos nav a{
+    .trabajos nav a {
         margin: 0 5px;
     }
 
-    .contacto .fila{
-        display:  block !important;
+    .contacto .fila {
+        display: block !important;
     }
-    .contacto .fila .col{
+
+    .contacto .fila .col {
         text-align: center;
         width: 100% !important;
     }
-    .contacto .fila .col .info{
+
+    .contacto .fila .col .info {
         float: left;
         font-size: 12px;
         width: 25%;

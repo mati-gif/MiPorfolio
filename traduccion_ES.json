@@ -16,9 +16,10 @@
     "conocimientos": "Conocimientos | Knowledge ",
     "herramientas": "Herramientas | Dev Tools ",
     "masSobreMi": "Más sobre mí",
-    "masDescripcion": "Mi nombre es Rajesh Daya Oda, Soy Ingeniero en Robótica, Frontend Developer enfocado a aplicaciones y desarrollo web. Subo contenido relacionado a programación desde mi canal de Youtube en donde comparto mis conocimientos a la comunidad. Pienso que con algo he de aportar. Toco varios instrumentos, me gusta la música y soy amante del buen cine.",
-    "masDescripcion2": "He trabajo en diferentes proyectos web con diversas tecnologías. Estuve desarrollando algunos proyectos de robótica con la plataforma de ARDUINO hace algún tiempo para una compañía y ahora me he enfocado más al Desarrollo de aplicaciones web. Me mantengo siempre actualizado ya que me gusta aprender cosas nuevas.",
+    "masDescripcion": "Mi nombre es  Matias, Desarrollador Full Stack Java + React JavaScript. Me dedico a crear aplicaciones robustas y escalables, combinando Java con Spring (Spring Data JPA, Spring Web, Spring Security) y React JavaScript. También manejo Redux y Tailwind CSS, junto con bases de datos relacionales como PostgreSQL.He trabajado bajo metodologías ágiles como Scrum, lo que me ha permitido no solo mantener una excelente comunicación con equipos y clientes, sino también implementar las mejores prácticas del mercado. Soy una persona curiosa, colaborativa y siempre en constante aprendizaje, lo que me ayuda a adaptarme rápidamente a nuevas tecnologías y desafíos. Además, actualmente estoy cursando  la carrera de Contabilidad, lo que ha fortalecido mis habilidades analíticas y organizativas, aportando una visión más integral a la gestión de proyectos y al trabajo en equipo. Mi enfoque está en la calidad y los resultados, asegurando soluciones eficientes y bien estructuradas.",
+    "masDescripcion2": "",
     "ubicacion": "Ubicación:",
     "enlace": "Enlace",
-    "tecnologiasUsadas": "Tecnologías Usadas"
+    "tecnologiasUsadas": "Tecnologías Usadas",
+    "infoDebajoTarjeta":"(Para ver mas info hacer clic sobre las tarjetas)"
 }

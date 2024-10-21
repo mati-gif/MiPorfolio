@@ -334,19 +334,62 @@ function updateContent() {
     });
 }
 
-// Event listeners para cambiar el idioma al hacer clic en los botones
+// Event listener para el botón EN
 document.getElementById('btn-en').addEventListener('click', function () {
-    i18next.changeLanguage('en', function() {
+    i18next.changeLanguage('en', function () {
         updateContent(); // Actualiza el contenido estático
-        mostrarProductos2(selectedProject); // Muestra el contenido del modal en inglés
+        mostrarProductos2(); // Muestra el contenido del modal en inglés
     });
 });
 
-let botonES = document.getElementById('btn-es').addEventListener('click', function () {
-    i18next.changeLanguage('es', function() {
+// Event listener para el botón ES
+document.getElementById('btn-es').addEventListener('click', function () {
+    i18next.changeLanguage('es', function () {
         updateContent(); // Actualiza el contenido estático
-        mostrarProductos2(selectedProject); // Muestra el contenido del modal en español
+        mostrarProductos2(); // Muestra el contenido del modal en español
     });
+
 
 });
 
+
+let botonEn = document.getElementById("btn-en")
+botonEn.addEventListener("click", cambiarColorLetra2)
+
+function cambiarColorLetra2() {
+
+
+    // Añade la clase 'active-lang' al botón 'EN' y remueve del botón 'ES'
+    let agregarClase = document.getElementById('btn-en')
+    let agregarClase2 = document.getElementById('btn-es')
+    console.log(agregarClase);
+    console.log(agregarClase2);
+
+
+    agregarClase.classList.add('active-lang');
+    // agregarClase.style.color = "green"
+
+    agregarClase2.classList.remove('active-lang');
+    // agregarClase2.style.color = "red"
+
+}
+
+
+let botonEs = document.getElementById("btn-es")
+console.log(botonEs);
+
+
+botonEs.addEventListener("click", cambiandoColorLetra)
+
+function cambiandoColorLetra() {
+    // Añade la clase 'active-lang' al botón 'ES' y remueve del botón 'EN'
+    let agregarClase = document.getElementById('btn-es');
+    let agregarClase2 = document.getElementById("btn-en")
+    console.log(agregarClase);
+    console.log(agregarClase2);
+
+
+    agregarClase.classList.add('active-lang');
+    agregarClase2.classList.remove('active-lang');
+
+}
