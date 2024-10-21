@@ -1,60 +1,56 @@
-  [
+[
     {
         "id": 1,
         "imagen": "./assets/Captura de pantalla 2024-10-15 184227.png",
-        "descripcion": "Es una aplicacion para un restaurante de Hamburguesas donde se puede pagar , reservar una mesa para comer en el local y hasta dejar una reseña de los productos",
+        "descripcion": {
+            "es": "Es una aplicacion para un restaurante de Hamburguesas donde se puede pagar , reservar una mesa para comer en el local y hasta dejar una reseña de los productos",
+            "en": "This is an application for a Hamburger restaurant where you can pay, reserve a table to eat on site, and even leave a review of the products"
+        },
         "enlace": "https://nuevorepofrontentvoyager.onrender.com/",
         "galeria": [
-                "./assets/Captura_de_pantalla_2024-10-16_005309-removebg-preview.png",
-                "./assets/redux-removebg-preview.png",
-                "./assets/react-removebg-preview.png",
-                "https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png",
-                "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
-                "https://seeklogo.com/images/P/postgresql-logo-5309879B58-seeklogo.com.png"
-
-            ]
-        
+            "./assets/Captura_de_pantalla_2024-10-16_005309-removebg-preview.png",
+            "./assets/redux-removebg-preview.png",
+            "./assets/react-removebg-preview.png",
+            "https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png",
+            "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
+            "https://seeklogo.com/images/P/postgresql-logo-5309879B58-seeklogo.com.png"
+        ]
     },
     {
         "id": 2,
         "imagen": "./assets/Captura de pantalla 2024-10-15 190219.png",
         "descripcion": "Es una aplicacion para un HomeBanking donde el usuario púede solicitar cuentas , tarjetas ,pedir pedir prestamos hasta realizar transacciones",
         "enlace": "https://proyectohomebankingfront-end-test-deploy.onrender.com",
-            "galeria": [
-                "./assets/Captura_de_pantalla_2024-10-16_005309-removebg-preview.png",
-                "./assets/redux-removebg-preview.png",
-                "./assets/react-removebg-preview.png",
-                "https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png",
-                "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
-                "https://seeklogo.com/images/P/postgresql-logo-5309879B58-seeklogo.com.png"
-
-            ]
+        "galeria": [
+            "./assets/Captura_de_pantalla_2024-10-16_005309-removebg-preview.png",
+            "./assets/redux-removebg-preview.png",
+            "./assets/react-removebg-preview.png",
+            "https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png",
+            "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
+            "https://seeklogo.com/images/P/postgresql-logo-5309879B58-seeklogo.com.png"
+        ]
     },
     {
         "id": 3,
         "imagen": "./assets/Captura de pantalla 2024-10-15 193053.png",
         "descripcion": "Es una aplicacion donde el usuario puede ver un listado con todas las peliculas y tambien puede ver el detalle de cada una de ellas",
         "enlace": "https://github.com/mati-gif/MOVIESTACK/tree/master",
-            "galeria": [
-                "https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png",
-                "https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png",
-                "https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png",
-                "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
-
-            ]
+        "galeria": [
+            "https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png",
+            "https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png",
+            "https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png",
+            "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
+        ]
     },
     {
         "id": 4,
         "imagen": "./assets/Captura de pantalla 2024-10-15 191157.png",
         "descripcion": "Es una aplicacion sobre un equipode Hockey llamado Mighty Ducks Hockey donde el usuario puede ver los horarios del equipo, donde van a jugar y tambien puede registrarse para formar parate del equipo de Hockey.",
         "enlace": "https://github.com/mati-gif/mighty-ducks-hockey",
-            "galeria": [
-                "https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png",
-                "https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png",
-                "https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png"
-            ]
+        "galeria": [
+            "https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png",
+            "https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png",
+            "https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png"
+        ]
     }
 ]
-
-
-

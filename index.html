@@ -2,8 +2,6 @@
 <html lang="es">
 
 <head>
-    <meta name="google" content="notranslate">
-    <meta http-equiv="Content-Language" content="es">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,12 +15,18 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css">
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://unpkg.com/i18next@21.6.4/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.0/i18nextHttpBackend.min.js"></script>
+    <script
+        src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/i18nextBrowserLanguageDetector.min.js"></script>
     <title>Porfolio</title>
 </head>
 
 <body>
+
+    <div id="google_translate_element">
+
+    </div> <!-- Contenedor para Google Translate -->
     <!-- Secciòn INICIO -->
     <span class="sombra">
         <section id="inicio" class="inicio">
@@ -30,14 +34,14 @@
                 <header>
                     <div class="logo">
                         <i class="fa-brands fa-codepen"></i>
-                        <h1>Matias Soria</h1>
+                        <h1 data-i18n="nombre">Matias Soria</h1>
                     </div>
                     <nav id="nav" class=""">
-                        <a href=" #inicio">Inicio</a>
-                        <a href="#trabajos">Trabajos</a>
-                        <a href="#skills">Habilidades</a>
-                        <a href="#contacto">Contacto</a>
-                        <a href="#about-me">About Us</a>
+                        <a href=" #inicio" data-i18n="inicio">Inicio</a>
+                        <a href="#trabajos" data-i18n="trabajos">Trabajos</a>
+                        <a href="#skills" data-i18n="skills">Habilidades</a>
+                        <a href="#contacto" data-i18n="contacto">Contacto</a>
+                        <a href="#about-me" data-i18n="about-me">Sobre mi </a>
                     </nav>
 
                     <!-- Icono del menu responsive -->
@@ -47,21 +51,20 @@
 
                     <div class="redes">
                         <!-- <span><i class="fa-solid fa-location-dot"></i>   Rosario,Santa Fe,Argentina</span> -->
-                        <a href="#">EN</a>
-                        <a href="#">ES</a>
-
+                        <button id="btn-es">ES</button>
+                        <button id="btn-en">EN</button>
                     </div>
                 </header>
 
                 <div class="fila">
                     <div class="col">
-                        <h2>Desarrollador Fullstack</h2>
-                        <p class="col-parrafo">Me dedico a crear aplicaciones robustas y escalables, combinando Java con
+                        <h2 data-i18n="soy">Desarrollador Fullstack</h2>
+                        <p data-i18n="descripcion" class="col-parrafo">Me dedico a crear aplicaciones robustas y escalables, combinando Java con
                             Spring (Spring Data JPA, Spring Web, Spring Security) y React JavaScript. También manejo
                             Redux y Tailwind CSS, junto con bases de datos relacionales como PostgreSQL.</p>
                         <a target="_blank"
                             href="https://www.dropbox.com/scl/fi/inbv8a04fsvk2xxqlzrqr/Curriculum2024.pdf?rlkey=plw8dr0k0xz5hvccime0e6jje&st=2br62g0g&dl=1">
-                            <button class="btn btn-1">Descargar CV</button>
+                            <button data-i18n="descargarCV" class="btn btn-1">Descargar CV</button>
                         </a>
                     </div>
                     <div class="col">
@@ -76,94 +79,12 @@
 
     <!-- sección SERVICIOS -->
     <section id="servicios" class="servicios">
-        <!-- <div class="fila">
-            <div class="col">
-                <div class="card">
-                    <div class="icono color1">
-                        <div class="circulo">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                    </div>
-                    <h3>Diseño Web</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore neque ducimus cupiditate, placeat incidunt culpa quis quod distinctio.</p>
-
-                    <a href="#">Leer Más</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="icono color2">
-                        <div class="circulo">
-                            <i class="fa-solid fa-palette"></i>
-                        </div>
-                    </div>
-                    <h3>Diseño Gráfico</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore neque ducimus cupiditate, placeat incidunt culpa quis quod distinctio.</p>
-
-                    <a href="#">Leer Más</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="icono color3">
-                        <div class="circulo">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                    </div>
-                    <h3>Animaciones</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore neque ducimus cupiditate, placeat incidunt culpa quis quod distinctio.</p>
-
-                    <a href="#">Leer Más</a>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="fila">
-            <div class="col">
-                <div class="card">
-                    <div class="icono color1">
-                        <div class="circulo">
-                            <i class="fa-solid fa-bullhorn"></i>
-                        </div>
-                    </div>
-                    <h3>Marketing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore neque ducimus cupiditate, placeat incidunt culpa quis quod distinctio.</p>
-
-                    <a href="#">Leer Más</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="icono color2">
-                        <div class="circulo">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </div>
-                    </div>
-                    <h3>Soporte Clientes</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore neque ducimus cupiditate, placeat incidunt culpa quis quod distinctio.</p>
-
-                    <a href="#">Leer Más</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="icono color3">
-                        <div class="circulo">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    </div>
-                    <h3>Tiendas</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore neque ducimus cupiditate, placeat incidunt culpa quis quod distinctio.</p>
-
-                    <a href="#">Leer Más</a>
-                </div>
-            </div>
-        </div> -->
     </section>
 
 
     <!-- sección trabajos -->
     <section class="trabajos" id="trabajos">
-        <h2>Mis Trabajos</h2>
+        <h2 data-i18n="trabajos" >Mis Trabajos</h2>
 
         <!-- <nav>
             <a href="javascript:void(0)" class="borde" id="item" onclick="verCategoria('item')">Todos</a>
@@ -178,8 +99,8 @@
                 <div class="info">
                     <h3>Voyager Application Restaurant </h3>
                     <!-- <span>html</span><span>css</span><span>javascript</span> -->
-                    <a href="https://nuevorepofrontentvoyager.onrender.com" target="_blank">Ver Trabajo</a>
-                    <p class="info-p" data-modal-id="1">Mas Info</p>
+                    <a data-i18n="trabajo1" href="https://nuevorepofrontentvoyager.onrender.com" target="_blank">Ver Trabajo</a>
+                    <p data-i18n="info" class="info-p" data-modal-id="1">Mas Info</p>
                 </div>
             </div>
             <div class="item programacion">
@@ -187,9 +108,9 @@
                 <div class="info">
                     <h3>HomeBanking</h3>
                     <!-- <span>html</span><span>css</span><span>javascript</span> -->
-                    <a href="https://proyectohomebankingfront-end-test-deploy.onrender.com" target="_blank">Ver
+                    <a data-i18n="trabajo1" href="https://proyectohomebankingfront-end-test-deploy.onrender.com" target="_blank">Ver
                         Trabajo</a>
-                    <p class="info-p" data-modal-id="2">Mas Info</p>
+                    <p data-i18n="info" class="info-p" data-modal-id="2">Mas Info</p>
                 </div>
             </div>
             <div class="item animaciones">
@@ -197,8 +118,8 @@
                 <div class="info">
                     <h3>Movie Stack</h3>
                     <!-- <span>html</span><span>css</span><span>javascript</span> -->
-                    <a href="https://github.com/mati-gif/MOVIESTACK" target="_blank">Ver Trabajo</a>
-                    <p class="info-p" data-modal-id="3">Mas Info</p>
+                    <a data-i18n="trabajo1" href="https://github.com/mati-gif/MOVIESTACK" target="_blank">Ver Trabajo</a>
+                    <p data-i18n="info" class="info-p" data-modal-id="3">Mas Info</p>
                 </div>
             </div>
             <div class="item disenio">
@@ -206,8 +127,8 @@
                 <div class="info">
                     <h3>Mighty Ducks Hockey</h3>
                     <!-- <span>html</span><span>css</span><span>javascript</span> -->
-                    <a href="https://github.com/mati-gif/mighty-ducks-hockey" target="_blank">Ver Trabajo</a>
-                    <p class="info-p" data-modal-id="4">Mas Info</p>
+                    <a data-i18n="trabajo1" href="https://github.com/mati-gif/mighty-ducks-hockey" target="_blank">Ver Trabajo</a>
+                    <p data-i18n="info" class="info-p" data-modal-id="4">Mas Info</p>
                 </div>
             </div>
         </div>
@@ -226,81 +147,12 @@
     </section>
 
 
-    <!-- sección habilidades -->
-    <!-- <section class="habilidades" id="habilidades">
-        <div class="contenedor-habi">
-            <h2>Habilidades</h2>
-            <div class="fila">
-                <div class="col">
-                    <div class="score">
-                        <div class="box">
-                            <div class="chart" data-percent="95">
-                                95%
-                            </div>
-                            <h2>HTML & CSS</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="score">
-                        <div class="box">
-                            <div class="chart" data-percent="90">
-                                90%
-                            </div>
-                            <h2>BOOSTRAP</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="score">
-                        <div class="box">
-                            <div class="chart" data-percent="85">
-                                85%
-                            </div>
-                            <h2>JAVASCRIPT</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="col">
-                    <div class="score">
-                        <div class="box">
-                            <div class="chart" data-percent="70">
-                                70%
-                            </div>
-                            <h2>MYSQL</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="score">
-                        <div class="box">
-                            <div class="chart" data-percent="90">
-                                90%
-                            </div>
-                            <h2>PHP</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="score">
-                        <div class="box">
-                            <div class="chart" data-percent="90">
-                                90%
-                            </div>
-                            <h2>PHOTOSHOP</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  -->
+
 
     <!-- SECCION SKILLS -->
     <section class="skills" id="skills">
         <div class="contenido-seccion">
-            <h2> Habilidades</h2>
+            <h2 data-i18n="habilidades"> Habilidades</h2>
             <div class="fila">
                 <!-- Technical Skill -->
                 <div class="col">
@@ -366,7 +218,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Spring(Junto con sus capas)</span>
+                        <span data-i18n="spring">Spring(Junto con sus capas)</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>90%</span>
@@ -389,25 +241,15 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="skill">
-                        <span>Proyect Management</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>94%</span>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <section class="skillss">
         <div class="skilll container">
             <div class="knowledge-part">
-                <h2 id="Conocimientos-h2"><span>Knowledge |</span> Conocimientos</h2>
+                <h2 data-i18n="conocimientos" id="Conocimientos-h2"><span>Knowledge |</span> Conocimientos</h2>
                 <div class="knowledge">
                     <div>
                         <img src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png"
@@ -455,7 +297,7 @@
 
 
             <div class="tools-part">
-                <h2 id="herramientas-h2"><span>Dev Tools |</span> Herramientas</h2>
+                <h2  data-i18n="herramientas"  id="herramientas-h2"><span>Dev Tools |</span> Herramientas</h2>
                 <div class="tools">
                     <div>
                         <img src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png"
@@ -502,48 +344,15 @@
     </section>
 
 
-    <!-- sección contacto
-    <section class="contacto" id="contacto">
-        <div class="contenedor-contacto">
-            <h2>Contacto</h2>
-            <div class="fila">
-                <div class="col">
-                    <div class="info">
-                        <h3>Email:</h3>
-                        <p>micorreo@gmail</p>
-                    </div>
-                    <div class="info">
-                        <h3>Teléfono:</h3>
-                        <p>+55 55555</p>
-                    </div>
-                    <div class="info">
-                        <h3>País</h3>
-                        <p>Argentina</p>
-                    </div>
-                    <div class="info">
-                        <h3>Ciudad:</h3>
-                        <p>San Luis</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <input type="text" placeholder="Nombre...">
-                    <input type="text" placeholder="Correo...">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <input type="submit" value="Enviar" class="btn">
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="about" id="about-me">
         <div class="about-flex container">
             <div class="about-info">
-                <h2 class="h2-about">Mas sobre mi </h2>
-                <p>Mi nombre es Rajesh Daya Oda, Soy Ingeniero en Robótica, Frontend Developer enfocado a aplicaciones y
+                <h2 data-i18n="masSobreMi"  class="h2-about">Mas sobre mi </h2>
+                <p data-i18n="masDescripcion" >Mi nombre es Rajesh Daya Oda, Soy Ingeniero en Robótica, Frontend Developer enfocado a aplicaciones y
                     desarrollo web. Subo contenido relacionado a programación desde mi canal de Youtube en donde
                     comparto mis conocimientos a la comunidad. Pienso que con algo he de aportar. Toco varios
                     instrumentos, me gusta la música y soy amante del buen cine.</p>
-                <p><br>He trabajo en diferentes proyectos web con diversas tecnologías. Estuve desarrollando algunos
+                <p  data-i18n="masDescripcion2"><br>He trabajo en diferentes proyectos web con diversas tecnologías. Estuve desarrollando algunos
                     proyectos de robótica con la plataforma de ARDUINO hace algún tiempo para una compañía y ahora me he
                     enfocado más al Desarrollo de aplicaciones web. Me mantengo siempre actualizado ya que me gusta
                     aprender cosas nuevas.</p>
@@ -567,15 +376,16 @@
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="redes">
-            <h2 class="footer-h2">Contacto</h2>
+            <h2 data-i18n="contacto" class="footer-h2">Contacto</h2>
             <p>Email:
                 <span class="redes-span" href="#"> matiassoria7700@gmail.com</span>
             </p>
             <p>Tel:
                 <span class="redes-span" href="#"> +54 3412778032</span>
             </p>
-            <p>Ubicacion:
-                <span class="redes-span" href="#">Rosario,Santa Fe ,Argentina</span>
+            <p >
+                <span  data-i18n="ubicacion" > Ubicacion:</span>
+                <span  class="redes-span" href="#">Rosario,Santa Fe ,Argentina</span>
             </p>
             <a class="redes-a" target="_blank" href="https://github.com/mati-gif"> GitHub </a>
             <a class="redes-a" target="_blank" href="https://www.linkedin.com/in/matias-soria-8706a719b/"> LinkedIn </a>

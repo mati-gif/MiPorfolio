@@ -163,8 +163,8 @@ function efectoHabilidades() {
         habilidades[5].classList.add("comunicacion");
         habilidades[6].classList.add("trabajo");
         habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+        // habilidades[8].classList.add("dedicacion");
+        // habilidades[9].classList.add("proyect");
     }
 }
 
@@ -276,14 +276,19 @@ function mostrarProductos(selectedProject) {
 }
 
 function mostrarProductos2(selectedProject) {
-    modalContentDiv2 = document.querySelector(".modal-content-div2")
+    modalContentDiv2 = document.querySelector(".modal-content-div2");
+
+    // Obtén el idioma actual
+    const currentLanguage = i18next.language;
+
+
     let content =
         `
         <div class="div-overlay">
-            <p class="p-divContent2">${selectedProject.descripcion}</p>
-            <span class="span-divContent2">Enlace:</span>
+            <p  class="p-divContent2">${selectedProject.descripcion[currentLanguage]}</p>
+            <span class="span-divContent2">${i18next.t('enlace')}:</span>
             <a class="a-divContent2" target="_blank" href="${selectedProject.enlace}">${selectedProject.enlace}</a>
-            <span class="span-divContent2">Tecnologias Usadas:</span>
+            <span class="span-divContent2">${i18next.t('tecnologiasUsadas')}:</span>
         </div>
 
                 
@@ -295,3 +300,53 @@ function mostrarProductos2(selectedProject) {
 
     modalContentDiv2.innerHTML += content
 }
+
+//------------  ↑↑↑↑↑ ACA TERMINA TODO SOBRE EL MODAL ↑↑↑↑↑ -------/////////
+
+
+
+//---------- ↓↓↓↓↓↓↓ ACA EMPIEZA PARA TRADUCIR LA PAGINA ↓↓↓↓↓↓↓ -----------///
+
+
+// Inicializa i18next con los plugins de backend y detector de idioma
+i18next
+    .use(i18nextHttpBackend) // Permite cargar archivos JSON desde el servidor
+    .use(i18nextBrowserLanguageDetector) // Detecta el idioma del navegador
+    .init({
+        fallbackLng: 'es', // Idioma por defecto
+        debug: true, // Modo debug para ver más información en consola
+        backend: {
+            // Cambia la ruta a los archivos JSON
+            loadPath: 'traduccion_{{lng}}.json' // Ruta a los archivos JSON
+        }
+    }, function (err, t) {
+        if (err) return console.error(err);
+
+        // Traduce el contenido una vez que i18next está listo
+        updateContent();
+    });
+
+// Función para actualizar el contenido del HTML con las traducciones
+function updateContent() {
+    document.querySelectorAll('[data-i18n]').forEach(function (element) {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = i18next.t(key);
+    });
+}
+
+// Event listeners para cambiar el idioma al hacer clic en los botones
+document.getElementById('btn-en').addEventListener('click', function () {
+    i18next.changeLanguage('en', function() {
+        updateContent(); // Actualiza el contenido estático
+        mostrarProductos2(selectedProject); // Muestra el contenido del modal en inglés
+    });
+});
+
+let botonES = document.getElementById('btn-es').addEventListener('click', function () {
+    i18next.changeLanguage('es', function() {
+        updateContent(); // Actualiza el contenido estático
+        mostrarProductos2(selectedProject); // Muestra el contenido del modal en español
+    });
+
+});
+

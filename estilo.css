@@ -54,10 +54,26 @@ body{
 }
 .inicio .redes a{
     text-decoration: none;
-    color: #fff;
+    color: #000;
     display: inline-block;
     margin: 0 10px;
+    font-size: 20px;
 }
+#btn-en, #btn-es{
+    font-size: 20px;
+    background-color: transparent;
+    border:  none;
+    margin: 0 10px;
+    color: #fff;
+    cursor: pointer;
+
+
+}
+
+#btn-en:hover, #btn-es:hover{
+    color: #ff5b00 ;
+}
+
 .inicio .redes a:hover{
     color: #ff5b00;
 }
