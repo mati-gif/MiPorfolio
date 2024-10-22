@@ -200,6 +200,7 @@ infoP.forEach(function (infoP) {
     infoP.addEventListener("click", openModal);
 });
 
+let selectedProject; // Declarar variable global para almacenar el proyecto seleccionado
 // Función para abrir el modal
 function openModal(event) {
     let dataModalId = parseInt(event.target.getAttribute("data-modal-id"))
@@ -215,8 +216,11 @@ function openModal(event) {
         .then(data => {
             console.log(data);
 
-            let selectedProject = data.find(item => item.id === dataModalId)
-            console.log(selectedProject);
+            selectedProject = data.find(item => item.id === dataModalId)
+            console.log("selectedProject después de buscar:", selectedProject); // Log para ver qué hay en selectedProject
+
+            // Guardar en localStorage
+            localStorage.setItem('selectedProject', JSON.stringify(selectedProject));
 
             mostrarProductos(selectedProject)
             mostrarProductos2(selectedProject)
@@ -239,6 +243,8 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none"; // Ocultar el modal
         limpiarModal()
+        // Limpiar localStorage
+        localStorage.removeItem('selectedProject');
 
     }
 }
@@ -247,7 +253,9 @@ window.onclick = function (event) {
 
 function limpiarModal() {
     modalContentDiv1.innerHTML = "";  // Limpiar la parte de la imagen
-    modalContentDiv2.innerHTML = ""
+    modalContentDiv2.innerHTML = "";
+    localStorage.removeItem('selectedProject');
+
 }
 
 
@@ -276,7 +284,19 @@ function mostrarProductos(selectedProject) {
 }
 
 function mostrarProductos2(selectedProject) {
+
+    console.log("selectedProject en mostrarProductos2:", selectedProject); // Log para verificar selectedProject
+
+    // Asegúrate de que selectedProject y descripcion existen
+    if (!selectedProject || !selectedProject.descripcion) {
+        console.error("selectedProject es indefinido o no tiene la propiedad 'descripcion'");
+        return; // Salir de la función si selectedProject es inválido
+    }
+
+
+
     modalContentDiv2 = document.querySelector(".modal-content-div2");
+
 
     // Obtén el idioma actual
     const currentLanguage = i18next.language;
@@ -338,7 +358,13 @@ function updateContent() {
 document.getElementById('btn-en').addEventListener('click', function () {
     i18next.changeLanguage('en', function () {
         updateContent(); // Actualiza el contenido estático
-        mostrarProductos2(); // Muestra el contenido del modal en inglés
+        // Recuperar el proyecto seleccionado del localStorage
+        const selectedProjectFromStorage = JSON.parse(localStorage.getItem('selectedProject'));
+        console.log("selectedProject recuperado del localStorage (EN):", selectedProjectFromStorage);
+
+        if (selectedProjectFromStorage) {
+            mostrarProductos2(selectedProjectFromStorage);
+        }
     });
 });
 
@@ -346,7 +372,14 @@ document.getElementById('btn-en').addEventListener('click', function () {
 document.getElementById('btn-es').addEventListener('click', function () {
     i18next.changeLanguage('es', function () {
         updateContent(); // Actualiza el contenido estático
-        mostrarProductos2(); // Muestra el contenido del modal en español
+        console.log(selectedProject);
+        // Recuperar el proyecto seleccionado del localStorage
+        const selectedProjectFromStorage = JSON.parse(localStorage.getItem('selectedProject'));
+        console.log("selectedProject recuperado del localStorage (ES):", selectedProjectFromStorage);
+
+        if (selectedProjectFromStorage) {
+            mostrarProductos2(selectedProjectFromStorage);
+        }
     });
 
 
