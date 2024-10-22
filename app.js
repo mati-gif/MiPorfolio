@@ -207,7 +207,7 @@ function openModal(event) {
     console.log(dataModalId);
 
 
-    fetch('data.json')
+    fetch('./data.json')
         .then(response => {
             // console.log(response.json());
 
@@ -337,7 +337,7 @@ i18next
         debug: true, // Modo debug para ver más información en consola
         backend: {
             // Cambia la ruta a los archivos JSON
-            loadPath: 'traduccion_{{lng}}.json' // Ruta a los archivos JSON
+            loadPath: './traduccion_{{lng}}.json' // Ruta a los archivos JSON
         }
     }, function (err, t) {
         if (err) return console.error(err);
