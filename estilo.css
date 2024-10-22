@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    /* background-color: #f6fafc; */
-    background-color: #000;
+    background-color: #f6fafc;
+    border: 10px solid #f4f;
 }
 
 /* SECCION I N I C I O */
