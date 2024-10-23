@@ -20,6 +20,7 @@
         src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/i18nextBrowserLanguageDetector.min.js"></script>
     <link rel="shortcut icon" href="https://seeklogo.com/images/A/adobe-portfolio-logo-A289F53AF8-seeklogo.com.png" type="image/x-icon">
     <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Porfolio</title>
 </head>
@@ -70,8 +71,8 @@
                         </a>
                     </div>
                     <div class="col">
-                        <div class="contenedor-img">
-                            <img src="./assets/IMG-20240602-WA0007-Photoroom.png" alt="">
+                        <div class="contenedor-img" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">
+                            <img  src="./assets/IMG-20240602-WA0007-Photoroom.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -402,6 +403,10 @@
     </footer>
     <script src="./app.js"></script>
     <!-- <script src="./data.js"></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
 </body>
 
 </html>
