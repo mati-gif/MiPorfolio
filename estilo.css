@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'M PLUS Rounded 1c';
+
 }
 
 html {
@@ -14,7 +15,9 @@ html {
 
 body {
     background-color: #f6fafc;
-    border: 10px solid #f4f;
+    /* border: 10px solid #2f2; */
+
+
 }
 
 /* SECCION I N I C I O */
@@ -23,26 +26,35 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 46%, 47% 84%, 0 45%);
     height: 90vh;
     padding: 0 20px;
-    border: 5px solid #000;
+    /* border: 5px solid #000; */
+
+
 }
 
 .inicio .contenido {
     max-width: 1100px;
     margin: auto;
     color: #fff;
-    border: 5px dashed #48e;
+    /* border: 5px dashed #48e; */
+
 
 }
-.contenido{
-    border: 8px solid #2f2;
+
+.contenido {
+    /* Reducir al 90%*/
+    transform: scale(0.730);
+    /* Asegura que la escala ocurra desde el centro */
+    transform-origin: top;
+
 }
 
 .inicio header {
     display: flex;
     justify-content: space-between;
-    padding: 25px 0;
+    padding: 30px 0;
     align-items: center;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
+
 }
 
 .inicio .logo {
@@ -190,48 +202,170 @@ body {
 
 @media screen and (max-width: 768px) {
     .inicio header {
-        flex-direction: column; /* Cambia la dirección del layout a columna */
+        flex-direction: column;
+        /* Cambia la dirección del layout a columna */
         align-items: center;
     }
 
+
+    #inicio{
+        height: 200vh;
+    }
+
     .redes {
-        order: -1; /* Coloca los botones arriba del nombre */
-        margin-bottom: 15px; /* Añade un margen inferior para separarlo del nombre */
+        order: -1;
+        /* Coloca los botones arriba del nombre */
+        margin-bottom: 15px;
+        /* Añade un margen inferior para separarlo del nombre */
     }
 
     .logo {
-        margin-top: 10px; /* Un pequeño margen superior */
-        text-align: center; /* Centra el contenido de la logo */
+        margin-top: 20px;
+        /* Un pequeño margen superior */
+        text-align: center;
+        /* Centra el contenido de la logo */
+        font-size:  1.5em;;
+
     }
 
     #btn-en,
     #btn-es {
-        font-size: 18px; /* Ajusta el tamaño de los botones */
-        margin: 5px; /* Ajusta el margen entre botones */
+        font-size: 24px;
+        /* Ajusta el tamaño de los botones */
+        margin: 5px;
+        /* Ajusta el margen entre botones */
+    }
+
+    #nombre{
+        font-size: 43px;
+
+    }
+    #icono-nav{
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    .col p {
+        font-size: 30px;
+        /* border: 1px solid #000; */
+    }
+    
+    #col-a{
+        /* background-color: #d82626 ;; */
+        padding: 20px;
+        font-size: 25px;
+        /* border: 1px solid #000; */
+        
+    }
+
+    #contenido{
+        /* border: 2px solid #3f3; */
+        width: 110%;
+    
+    }
+    
+    #contenedor-img{
+        /* border:8px solid #000; */
+        width: 90%;
+        
     }
 }
 
 @media screen and (max-width: 480px) {
+
+    #inicio{
+        height: 200vh;
+    }
     #btn-en,
     #btn-es {
-        font-size: 16px; /* Tamaño más pequeño en pantallas muy pequeñas */
-        margin: 3px; /* Menos margen en pantallas pequeñas */
+        font-size: 24px;
+        /* Tamaño más pequeño en pantallas muy pequeñas */
+        margin: 3px;
+        /* Menos margen en pantallas pequeñas */
     }
 
     .logo {
-        font-size: 20px; /* Ajusta el tamaño del texto de la logo si es necesario */
+        font-size:  1.5em;;
+        /* border: 1px solid #000; */
     }
+    #nombre{
+        font-size: 43px;
+
+    }
+
+    #icono-nav{
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+
+
+
+.col p {
+    font-size: 30px;
+    /* border: 1px solid #000; */
 }
 
+#col-a{
+    /* background-color: #d82626 ;; */
+    padding: 20px;
+    font-size: 25px;
+    /* border: 1px solid #000; */
+    
+}
 
+#contenido{
+    /* border: 2px solid #3f3; */
+    width: 110%;
+
+}
+
+#contenedor-img{
+    /* border:8px solid #000; */
+    width: 90%;
+    
+}
+}
+
+@media screen and (max-width: 360px) {
+
+    .inicio header {
+        flex-direction: column;
+        /* Cambia la dirección del layout a columna */
+        align-items: center;
+    }
+
+    #btn-en,
+    #btn-es {
+        font-size: 24px;
+        /* Tamaño más pequeño en pantallas muy pequeñas */
+        margin: 3px;
+        /* Menos margen en pantallas pequeñas */
+    }
+
+    .logo {
+        font-size: 20px;
+        /* Ajusta el tamaño del texto de la logo si es necesario */
+        margin: auto;
+    }
+
+
+}
 
 /* ↑↑↑↑↑ ACA TERMINA LA SECCION DEL NAV Y DEL INICIO ↑↑↑↑↑↑↑*/
+
+
 
 /* SECCION T R A B A J O S */
 .trabajos {
     max-width: 1300px;
     margin: auto;
     padding: 10px 30px;
+    /* border: 5px solid #000; */
+            /* Reducir al 90%*/
+            transform: scale(0.8);
+            /* Asegura que la escala ocurra desde el centro */
+            transform-origin: top;
 
 }
 
@@ -242,10 +376,10 @@ body {
     margin: 15px;
 }
 
-.trabajos nav {
+/* .trabajos nav {
     text-align: center;
     margin: 30px 0;
-}
+} */
 
 .trabajos nav a {
     text-decoration: none;
@@ -270,13 +404,24 @@ body {
     width: 100%;
     height: 100%;
     display: block;
+    /* border: 5px dotted #900; */
+
+
 }
 
 .trabajos .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     grid-gap: 30px;
+    /* border: 5px groove #8ff; */
+
+
 }
+/* 
+.galeria{
+
+        border: 2px solid #f00;
+} */
 
 .trabajos .galeria .item {
     position: relative;
@@ -341,7 +486,7 @@ body {
     background: linear-gradient(to right, #ff5b00, #ff9900);
     color: #fff;
     border-radius: 10px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     cursor: pointer;
 
 }
@@ -357,7 +502,7 @@ body {
     top: 0;
 }
 
-.infoDebajoTarjeta{
+.infoDebajoTarjeta {
     text-align: center;
     padding: 10px;
     font-size: 24px;
@@ -399,7 +544,7 @@ body {
         top: 0;
     }
 
-    .infoDebajoTarjeta{
+    .infoDebajoTarjeta {
         text-align: center;
         padding: 8px;
         font-size: 14px;
@@ -459,11 +604,16 @@ body {
         grid-gap: 15px;
         /* Reduce el espacio entre los elementos si es necesario */
     }
+
     .trabajos .galeria .item:hover .info {
         opacity: 1;
         top: 0;
     }
 }
+
+
+
+
 
 /* ↑↑↑↑↑↑↑  ACA TERMINA LA SECCION T R A B A J O S ↑↑↑↑↑↑↑*/
 
@@ -489,6 +639,9 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
     /* Fondo oscuro con opacidad */
     /* border: 10px solid #040; */
+
+
+
 }
 
 /* Contenido del modal */
@@ -498,15 +651,19 @@ body {
     /* 15% desde la parte superior y centrado */
     padding: 20px;
     border: 1px solid #888;
-    width: 55%;
+    width: 70%;
     /* Ancho del modal */
-    height: 65%;
+    height: 75%;
     /* border: 5px solid #6f6; */
     border-radius: 10px;
     /* background:linear-gradient(to right, #007be5, #007be5); */
-    background-color: #F6FAFC;
+    /* background-color: #F6FAFC; */
     display: flex;
     gap: 8px;
+    
+
+
+
 }
 
 
@@ -548,11 +705,11 @@ body {
 }
 
 .div-overlay {
-    /* border: 1px solid #58e705; */
+    /* border: 1px solid #e705c1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70%;
+    height: 85%;
 }
 
 .p-divContent2 {
@@ -561,12 +718,14 @@ body {
     padding: 5px;
     font-weight: bold;
     /* border: 1px solid #000; */
+
 }
 
 .img-divContent2 {
-    width: 10%;
-    margin: 3px;
-    margin-top: 8px;
+    width: 13%;
+    margin: 4px;
+    margin-top: 5px;
+    /* border: 1px solid #000; */
 }
 
 .span-divContent2 {
@@ -574,6 +733,8 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-top: 15px;
+    /* border: 1px solid #000; */
+
 }
 
 .a-divContent2 {
@@ -581,6 +742,9 @@ body {
     font-size: 18px;
     padding: 6px;
     font-weight: bold;
+    /* border: 1px solid #000; */
+    word-wrap: break-word;
+
 
 }
 
@@ -607,7 +771,7 @@ body {
 /* Estilos Responsivos */
 @media screen and (max-width: 768px) {
     .modal-content {
-        width: 80%;
+        width: 100%;
         /* Ajusta el ancho del modal en tabletas */
         height: auto;
         flex-direction: column;
@@ -649,7 +813,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .modal-content {
-        width: 55%;
+        width: 98%;
         /* Ajusta el ancho del modal en móviles */
         margin: 10% auto;
         /* Más centrado en móviles */
@@ -692,16 +856,22 @@ body {
     background: linear-gradient(to right, #000c76, #007be5);
     color: #fff;
     padding: 50px 20px;
-    margin-top: 100px;
+    margin-top: 10px;
+    /* border: 5px solid #aff; */
+
 }
 
 .skills .contenido-seccion {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
+    /* border: 3px dashed #f54; */
 }
 
+/* .contenido-seccion{
+    border: 3px dashed #f54;
+} */
 .skills h2 {
-    font-size: 48px;
+    font-size: 30px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -917,18 +1087,7 @@ body {
     }
 }
 
-/*No la  ↓↓↓ estoy usando */
-/* .skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
-}
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 94%;}
-} */
-
 /*Aca termina todo ↑↑↑↑↑ lo de  las Habilidades*/
-
 
 /*OPCION 2 ↓↓↓↓↓ PARA MOSTRAR LAS SKILLS ↓↓↓↓↓↓↓ ACA LO HAGO CON LOS ICONOS*/
 
@@ -940,36 +1099,42 @@ section.skillss {
 
 .skilll {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     justify-content: center;
     gap: 170px;
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 110px;
+    padding-bottom: 30px;
+    /* border: 5px solid #000; */
 
 }
 
 .skilll h2 {
-    padding: 30px 30px 90px 30px;
-    font-size: 2.2rem;
+    padding: 30px 30px 50px 30px;
+    font-size: 1.8rem;
+    /* border: 5px solid #d5d; */
 }
 
 .skilll img {
-    width: 90px;
+    width: 70px;
+    /* border: 5px dotted #aaa; */
 }
 
 .knowledge {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
+    /* border: 3px solid #54a; */
+    margin-top: 15px;
 }
 
 .tools {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(70px, auto));
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
+    margin-top: 15px;
 
 }
 
@@ -979,7 +1144,7 @@ section.skillss {
     /* background-color: #050505; */
     text-align: center;
     border-radius: 5px;
-    padding: 5px 0;
+    padding: 3px 0;
     font-size: 1.1rem;
     color: #fff;
     width: 100px;
@@ -1007,39 +1172,44 @@ section.skillss {
 }
 
 .npm-logo {
-    margin-top: 30px;
+    margin-top: 40px;
 }
-
-
 
 /*↓↓↓↓↓↓ SECCION SOBRE MI (ABOUT) ↓↓↓↓↓↓↓*/
 
 .about {
     background-color: #F6FAFC;
+    /* border: 5px dashed #88d; */
 }
 
 .about-flex {
     display: flex;
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
-    padding: 50px 0 100px;
+    padding: 50px 0 80px;
+    /* border: 5px solid #000; */
 }
 
 .about p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     width: 90%;
     margin: 0 auto;
     line-height: 2.5rem;
+    /* border: 1px solid #000; */
 }
 
 .social {
     border-left: #000 5px solid;
-    padding-left: 50px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
 
 .social img {
-    width: 60px;
-    margin: 10px;
+    width: 50px;
+    margin: 10px ;
 }
 
 .social img:hover {
@@ -1049,7 +1219,7 @@ section.skillss {
 .h2-about {
     text-align: center;
     padding: 10px;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 /* Estilos responsivos para la sección .about */
@@ -1138,7 +1308,7 @@ section.skillss {
 footer {
     background: linear-gradient(to right, #000c76, #007be5);
     color: #fff;
-    padding: 50px 0 30px 0;
+    padding: 50px 0 20px 0;
     text-align: center;
     position: relative;
     width: 100%;
@@ -1156,6 +1326,8 @@ footer .redes {
     align-items: center;
     gap: 10px;
     height: 100%;
+    /* border: 1px solid #000; */
+
 }
 
 footer .redes p {
@@ -1169,7 +1341,7 @@ footer .redes p {
     transition: .3s;
     /* border: 1px solid #000; */
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
 
 }
@@ -1185,7 +1357,7 @@ footer .redes p {
     transition: .3s;
     /* border: 1px solid #000; */
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
 }
 
@@ -1205,14 +1377,16 @@ footer .arriba {
     top: -25px;
     border-radius: 50%;
     line-height: 50px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .footer-h2 {
     /* border: 1px solid #000; */
     width: 100%;
     height: 100%;
-    font-size: 40px;
+    font-size: 30px;
+    /* border: 1px solid #000; */
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1293,9 +1467,7 @@ footer .arriba {
     }
 }
 
-
 /* ↑↑↑↑↑↑↑ ACA TERMINA EL FOOTER ↑↑↑↑↑↑↑*/
-
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width:1180px) {
@@ -1305,7 +1477,7 @@ footer .arriba {
 }
 
 @media screen and (max-width:800px) {
-/*     .redes {
+    /*     .redes {
         display: none;
     } */
 
